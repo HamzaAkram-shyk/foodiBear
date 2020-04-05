@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_Items"
+        android:icon="@drawable/ic_category_icon"
+        android:menuCategory="secondary"
+        android:title="@string/bottom_menu_category" />
+    <item
+        android:id="@+id/bottom_nav_Discount"
+        android:icon="@drawable/discount_icon"
+        android:menuCategory="secondary"
+        android:title="@string/botttom_menu_sale" />
+    <item
+        android:id="@+id/bottom_nav_userlocation"
+        android:icon="@drawable/ic_location_ofuser"
+        android:menuCategory="secondary"
+        android:title="@string/bottom_menu_userlocaion" />
+
+</menu>

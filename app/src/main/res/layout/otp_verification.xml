@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/Top_bar_height"
+                android:id="@+id/topBar"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/sms_icon"
+                android:src="@drawable/sms_icon"
+                app:layout_constraintTop_toBottomOf="@id/topBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/topBar"
+                />
+
+            <TextView
+                android:id="@+id/headingTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="monospace"
+                android:text="Verify Mobile Number"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/sms_icon"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="@id/sms_icon"
+                app:layout_constraintTop_toBottomOf="@id/sms_icon" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/headingTxt"
+                app:layout_constraintTop_toBottomOf="@id/headingTxt"
+                android:layout_marginTop="30dp"
+                android:textColor="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="@id/headingTxt"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:id="@+id/instructionTxt"
+                android:text="OTP has been sent to you on your mobile number please enter it below"
+                />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:id="@+id/otpCode_field"
+                app:layout_constraintTop_toBottomOf="@id/instructionTxt"
+                app:layout_constraintStart_toStartOf="@id/headingTxt"
+                app:layout_constraintEnd_toEndOf="@id/headingTxt"
+                android:background="@drawable/green_stroke"
+                android:layout_marginTop="20dp"
+                android:hint="Enter Code"
+                android:inputType="number"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:textSize="20sp"
+
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="5dp"
+                android:id="@+id/verifyBtn"
+                android:layout_marginEnd="5dp"
+                android:background="@color/colorPrimary"
+                android:text="Verify"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:drawableStart="@drawable/ic_select_icon"
+                android:paddingRight="10dp"
+                android:drawablePadding="5dp"
+                android:paddingStart="5dp"
+                android:textColor="@android:color/white"
+                android:elevation="8dp"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintTop_toBottomOf="@id/otpCode_field"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="20dp"
+
+                />
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:elevation="16dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/instructionTxt"
+                app:layout_constraintEnd_toEndOf="@id/instructionTxt"
+                app:layout_constraintTop_toTopOf="@id/instructionTxt"
+                app:layout_constraintBottom_toBottomOf="@id/verifyBtn"
+                app:layout_constraintVertical_bias="0.5"
+                android:id="@+id/verifying_bar"
+                style="@style/progressbar_color"
+                android:indeterminateDrawable="@drawable/circular_progressbar"
+                android:indeterminateDuration="@android:integer/config_longAnimTime"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+

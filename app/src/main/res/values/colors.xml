@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2ecc72</color>
+    <color name="colorPrimaryDark">#26ae60</color>
+    <color name="colorAccent">@android:color/black</color>
+    <color name="offItemSelectedColor">#636060</color>
+    <color name="haffWhite">#deded6</color>
+
+    <color name="onItemSelectedColor">@color/colorPrimary</color>
+
+    <color name="drawer_color">#7CB342</color>
+    <color name="background_Color">#009688</color>
+    <color name="background">#0e0d0e</color>
+    <color name="OverlayBackground">#7f333639</color>
+    <color name="backgroundColor">#072344</color>
+</resources>
+
+

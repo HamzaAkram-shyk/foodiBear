@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_drinks"
+            android:icon="@drawable/drink_icon"
+            android:iconTint="@android:color/white"
+            android:title="@string/menu_Drinks" />
+        <item
+            android:id="@+id/nav_userOrders"
+            android:icon="@drawable/ic_food"
+            android:iconTint="@android:color/white"
+            android:title="@string/menu_orders" />
+        <item
+            android:id="@+id/nav_userAccount"
+            android:icon="@drawable/useracount_icon"
+            android:iconTint="@android:color/white"
+            android:title="@string/menu_account" />
+    </group>
+
+    <item android:title="Developer Information"
+        android:iconTint="@android:color/black"
+
+        >
+
+        <menu>
+            <item
+                android:id="@+id/nav_aboutDeveloper"
+                android:icon="@drawable/about_icon"
+                android:iconTint="@android:color/white"
+                android:title="@string/menu_about" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/exit_icon"
+                android:iconTint="@android:color/white"
+                android:title="@string/menu_exit" />
+
+            <item
+                android:visible="false"
+                android:id="@+id/Checkout_fragment"/>
+        </menu>
+    </item>
+
+</menu>

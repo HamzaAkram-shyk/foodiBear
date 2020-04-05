@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+             xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:cardElevation="5dp"
+             android:layout_margin="3dp"
+             android:id="@+id/cardview"
+             app:cardCornerRadius="5dp"
+
+    >
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 >
+                 <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="150dp"
+                         android:id="@+id/product_imageview"
+                         android:scaleType="centerCrop"
+                         android:src="@drawable/burger"
+
+                         />
+
+
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@id/product_imageview"
+                     android:layout_marginStart="15dp"
+                     android:id="@+id/pricetag"
+                     android:layout_marginEnd="20dp"
+                     android:layout_marginTop="15dp"
+                     android:text="$1000000"
+                     android:visibility="gone"
+                     android:textSize="12sp"
+                     android:textStyle="bold"
+                     android:textColor="@color/colorPrimary"/>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/productDescrip_textview"
+                     android:text="Chicken Burger cheeze with small Coke "
+                     android:fontFamily="sans-serif-smallcaps"
+                     android:textStyle="bold"
+                     android:layout_alignStart="@id/pricetag"
+                     android:layout_marginEnd="10dp"
+                     android:textSize="15sp"
+                     android:layout_centerHorizontal="true"
+                     android:layout_marginTop="5dp"
+                     android:layout_below="@id/pricetag"
+                     android:textColor="@android:color/black"
+                     android:paddingBottom="5dp"
+                     tools:ignore="UnknownId" />
+
+             </RelativeLayout>
+
+         </androidx.cardview.widget.CardView>
+
+
+
+
+

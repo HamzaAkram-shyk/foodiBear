@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_Items">
+
+    <fragment
+        android:id="@+id/bottom_nav_Discount"
+        android:name="com.example.foodibear.Fragments.DiscountFragment"
+        android:label="@string/bottom_menu_category"
+        tools:layout="@layout/fragment_discount" />
+    <fragment
+        android:id="@+id/bottom_nav_cart"
+        android:name="com.example.foodibear.Fragments.UserCartFragment"
+        android:label="@string/Blank_space"
+        tools:layout="@layout/fragment_user_cart" />
+    <fragment
+        android:id="@+id/bottom_nav_userlocation"
+        android:name="com.example.foodibear.Fragments.UserLocationFragment"
+        android:label="@string/bottom_menu_userlocaion"
+        tools:layout="@layout/fragment_user_location" />
+    <fragment
+        android:id="@+id/nav_aboutDeveloper"
+        android:name="com.example.foodibear.DrawerFragments.AboutDeveloperFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/checkout_fragments" />
+    <fragment
+        android:id="@+id/nav_drinks"
+        android:name="com.example.foodibear.DrawerFragments.DrinksFragment"
+        android:label="fragment_drinks"
+        tools:layout="@layout/fragment_drinks" />
+    <fragment
+        android:id="@+id/nav_Items"
+        android:name="com.example.foodibear.DrawerFragments.ItemsFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_items" />
+    <fragment
+        android:id="@+id/nav_userOrders"
+        android:name="com.example.foodibear.DrawerFragments.UserOrdersFragment"
+        android:label="fragment_user_orders"
+        tools:layout="@layout/fragment_user_orders" />
+
+
+    <fragment
+        android:id="@+id/Checkout_fragment"
+        android:name="com.example.foodibear.Fragments.CheckoutFragment"
+        android:label="@string/Blank_space"
+        tools:layout="@layout/checkout_fragments" />
+</navigation>

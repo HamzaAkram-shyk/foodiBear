@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">foodiBear</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="Checkout">Checkout</string>
+
+    <string name="UserCart">Cart</string>
+    <string name="menu_Drinks">Drinks</string>
+    <string name="menu_orders">Orders</string>
+    <string name="menu_account">Profile</string>
+    <string name="menu_about"> </string>
+    <string name="menu_exit">Exit</string>
+    <string name="Blank_space"> </string>
+    <!-- TODO: text for bottom navigation -->
+    <string name="bottom_menu_category">Items</string>
+    <string name="botttom_menu_sale">Sale</string>
+    <string name="bottom_menu_userlocaion">Location</string>
+    <!-- TODO: text for bottom navigation -->
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="facebook_app_id">2559461477435008</string>
+    <string name="fb_login_protocol_scheme">fb2559461477435008</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+</resources>

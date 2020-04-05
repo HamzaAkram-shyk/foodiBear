@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/haffWhite"
+    tools:context=".Activities.ProductsActivity"
+    >
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/appbar"
+    style="@style/ThemeOverlay.AppCompat.ActionBar"
+    android:fitsSystemWindows="true"
+   >
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        android:id="@+id/collapsing"
+        app:contentScrim="@android:color/white"
+        app:expandedTitleTextAppearance="@android:color/black">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_collapseMode="parallax"
+            />
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+
+                 <de.hdodenhof.circleimageview.CircleImageView
+                     android:layout_width="120dp"
+                     android:layout_height="100dp"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     android:src="@drawable/pizza_image"
+                     app:layout_constraintVertical_bias="0.7"
+                     android:id="@+id/img_circle"
+                     android:layout_marginStart="10dp"
+                     />
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textColor="@android:color/white"
+                     android:textSize="20sp"
+                     android:id="@+id/product_name"
+                     app:layout_constraintTop_toTopOf="@id/img_circle"
+                     app:layout_constraintStart_toEndOf="@id/img_circle"
+                     android:layout_marginStart="5dp"
+                     android:layout_marginTop="10dp"
+                     android:fontFamily="serif-monospace"
+                     android:text="Pizza"
+                     android:textStyle="bold"
+                     />
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+
+
+
+
+
+</com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:elevation="5dp"
+        android:id="@+id/recycler"
+        android:layout_below="@id/appbar"
+
+        />
+
+
+
+
+
+
+
+  <pl.droidsonroids.gif.GifImageView
+      android:id="@+id/bear_animation"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/bear_animation"
+      android:layout_marginTop="50dp"
+      android:elevation="7dp"
+      />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="7dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="7dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/search_box"
+                >
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:src="@android:drawable/ic_search_category_default"
+                    android:layout_gravity="center_vertical"
+
+                    />
+                <androidx.appcompat.widget.SearchView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    app:searchIcon="@null"
+                    android:layout_weight="7.5"
+                    app:iconifiedByDefault="false"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/search_bar"/>
+            </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/searchItemRecyclerview"
+                    app:layout_constraintTop_toBottomOf="@id/search_box"
+                    app:layout_constraintStart_toStartOf="@id/search_box"
+                    app:layout_constraintEnd_toEndOf="@id/search_box"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+
+                    />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
