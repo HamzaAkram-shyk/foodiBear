@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SearchView;
 import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -38,6 +39,7 @@ import com.example.foodibear.Adapters.ShoppingCartAdapter;
 import com.example.foodibear.Adapters.adapterParameter;
 import com.example.foodibear.Adapters.gridItems_Adapter;
 import com.example.foodibear.Fragments.UserCartFragment;
+import com.example.foodibear.Logic.SearchEngine;
 import com.example.foodibear.Model.Category;
 import com.example.foodibear.Model.Item;
 import com.example.foodibear.Model.Product;
@@ -74,6 +76,8 @@ public class ItemsFragment extends Fragment {
     List<Integer> image;
     List<Product> productList;
     private Animation animation;
+    private RecyclerView searchingRecyclerview;
+    private SearchView searchView;
 
 
 
@@ -137,6 +141,13 @@ public class ItemsFragment extends Fragment {
 
 
       //  fetchingCategories();
+        searchingRecyclerview=mainView.findViewById(R.id.searchItemRecyclerview);
+        searchView=mainView.findViewById(R.id.search_bar);
+        searchingRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
+        SearchEngine searchEngine=new SearchEngine(getContext());
+        searchEngine.setRecyclerview(searchingRecyclerview);
+        searchEngine.setSearchView(searchView);
+        searchEngine.displayItems();
 
 
         return mainView;

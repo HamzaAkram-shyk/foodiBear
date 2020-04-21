@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@color/haffWhite"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="200dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/burger"
+            android:elevation="5dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/product_imageview"
+            android:layout_gravity="center_horizontal"
+            />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_gravity="bottom"
+            android:padding="5dp"
+
+            >
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:layout_marginStart="5dp"
+              android:paddingTop="20dp"
+              android:layout_marginEnd="5dp"
+              android:layout_marginTop="10dp"
+              >
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Chicken Tikka Pizza"
+                  android:layout_marginStart="5dp"
+                  android:textColor="@android:color/black"
+                  android:id="@+id/productDescrip_textview"
+                  android:fontFamily="sans-serif"
+                  android:layout_marginEnd="5dp"
+                  android:textSize="20sp"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="$ 1000000"
+                  android:textStyle="bold"
+                  android:layout_marginTop="10dp"
+                  android:id="@+id/pricetag"
+                  android:layout_alignStart="@id/productDescrip_textview"
+                  android:layout_below="@id/productDescrip_textview"
+                  android:textColor="@color/colorPrimary"
+                  android:textSize="18sp"/>
+
+          </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+
+
+

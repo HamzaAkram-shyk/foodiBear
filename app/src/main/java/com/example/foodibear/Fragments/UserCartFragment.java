@@ -31,6 +31,7 @@ import com.example.foodibear.Activities.ProductDetailed;
 import com.example.foodibear.Adapters.OrderShipping_Adapter;
 import com.example.foodibear.Adapters.ShoppingCartAdapter;
 import com.example.foodibear.Adapters.gridItems_Adapter;
+import com.example.foodibear.Constant.constant;
 import com.example.foodibear.Model.Category;
 import com.example.foodibear.Model.Product;
 import com.example.foodibear.R;
@@ -159,6 +160,7 @@ public class UserCartFragment extends Fragment {
             case R.id.checkout:
                 NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
                 navController.navigate(R.id.Checkout_fragment);
+                constant.ORDER_LIST=orderList;
                 break;
 
             case R.id.action_settings:

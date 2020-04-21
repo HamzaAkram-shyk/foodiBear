@@ -1,5 +1,7 @@
 package com.example.foodibear.Room_Database;
 
+import com.example.foodibear.order_history_database.OrderDetail;
+
 import java.util.List;
 
 import androidx.room.Dao;
@@ -14,5 +16,7 @@ public interface MyDao {
 
     @Query("Select * from Orders")
     public List<UserOrder> getOrders();
+
+
 
 }

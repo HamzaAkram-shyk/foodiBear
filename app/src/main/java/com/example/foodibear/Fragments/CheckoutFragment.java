@@ -82,6 +82,7 @@ public class CheckoutFragment extends Fragment {
                   getContext().startActivity(intent);
                   getActivity().finish();
               } else{
+                  //MainActivity.cartDatabase.clearAllTables();
                   Toast.makeText(getContext(),"Fill correct informtaion "+size,Toast.LENGTH_SHORT).show();
               }
 

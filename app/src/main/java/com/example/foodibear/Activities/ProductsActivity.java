@@ -138,20 +138,6 @@ public class ProductsActivity extends AppCompatActivity  implements Serializable
                 return false;
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 

@@ -89,24 +89,26 @@ public class ShoppingCartAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder holder, int position) {
         if (holder.getItemViewType() == LAYOUT_SHOPPING_CART) {
             // Typecast Viewholder
             // Set Viewholder properties
             // Add any click listener if any
             UserOrder order=orderList.get(position);
             final ViewHolder_0 vaultItemHolder = (ViewHolder_0) holder;
-            vaultItemHolder.elegantNumberButton.setNumber(order.getProductQuantity());
             vaultItemHolder.productImage.setImageResource(R.drawable.prsal);
             vaultItemHolder.productName.setText(orderList.get(position).getProductName());
             vaultItemHolder.productPrice.setText(orderList.get(position).getProductPrice());
-            vaultItemHolder.productQuantity.setText(vaultItemHolder.elegantNumberButton.getNumber());
-            vaultItemHolder.elegantNumberButton.setOnValueChangeListener(new ElegantNumberButton.OnValueChangeListener() {
-                @Override
-                public void onValueChange(ElegantNumberButton view, int oldValue, int newValue) {
-                    vaultItemHolder.productQuantity.setText(String.valueOf(newValue));
-                }
-            });
+            vaultItemHolder.productQuantity.setText(orderList.get(position).getProductQuantity());
+            vaultItemHolder.elegantNumberButton.setNumber(vaultItemHolder.productQuantity.getText().toString());
+
+          vaultItemHolder.elegantNumberButton.setOnValueChangeListener(new ElegantNumberButton.OnValueChangeListener() {
+              @Override
+              public void onValueChange(ElegantNumberButton view, int oldValue, int newValue) {
+                  Toast.makeText(context," Old: "+oldValue+" New: "+newValue,Toast.LENGTH_LONG).show();
+              }
+          });
+
 
 
         } else {

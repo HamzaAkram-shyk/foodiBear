@@ -6,13 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.TextView;
 
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
-import com.example.foodibear.Model.OrderShipping;
-import com.example.foodibear.Model.User;
+
 import com.example.foodibear.R;
 import com.example.foodibear.Room_Database.UserOrder;
 
@@ -24,7 +22,6 @@ import androidx.recyclerview.widget.RecyclerView;
 public class OrderShipping_Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private List<UserOrder> orderlist;
-    private OrderShipping userOrder;
     private static final int CART_ITEM_LAYOUT=0;
     private static final int PRICE_DETAILS_LAYOUT=1;
     UserOrder order=new UserOrder();
@@ -33,7 +30,6 @@ public class OrderShipping_Adapter extends RecyclerView.Adapter<RecyclerView.Vie
     public OrderShipping_Adapter(Context context, List<UserOrder> orderlist) {
         this.context = context;
         this.orderlist = orderlist;
-        this.userOrder = new OrderShipping();
         // because last layout must be Price Detailed Layout
         order.setLayoutType(1);
         this.orderlist.add(order);
@@ -58,11 +54,23 @@ public class OrderShipping_Adapter extends RecyclerView.Adapter<RecyclerView.Vie
           switch (orderlist.get(position).getLayoutType()){
               case CART_ITEM_LAYOUT:
                   //orderlist.get(position).setProductQuantity("2");
+                  final UserOrder order=orderlist.get(position);
+                  final CartItem cartReference=(CartItem) holder;
+                  cartReference.productQuantity.setText(order.getProductQuantity());
+                  cartReference.productName.setText(order.getProductName());
+                  cartReference.productPrice.setText(order.getProductPrice());
+                  cartReference.productImage.setImageResource(R.drawable.prsal);
+                  cartReference.elegantNumberButton.setNumber(order.getProductQuantity());
+                  cartReference.elegantNumberButton.setOnValueChangeListener(
+                          new ElegantNumberButton.OnValueChangeListener() {
+                      @Override
+                      public void onValueChange(ElegantNumberButton view, int oldValue, int newValue) {
 
-                  ((CartItem)holder).productQuantity.setText(orderlist.get(position).getProductQuantity());
-                  ((CartItem)holder).productName.setText(orderlist.get(position).getProductName());
-                  ((CartItem)holder).productPrice.setText(orderlist.get(position).getProductPrice());
-                  ((CartItem)holder).productImage.setImageResource(R.drawable.prsal);
+                          order.setProductQuantity(String.valueOf(newValue));
+                          cartReference.productQuantity.setText(order.getProductQuantity());
+
+                      }
+                  });
  break;
 
 
@@ -116,9 +124,9 @@ public class OrderShipping_Adapter extends RecyclerView.Adapter<RecyclerView.Vie
     private TextView productPrice;
     private TextView productName;
     private TextView productQuantity;
-    private ImageButton deleteBtn;
+    private ImageButton deleteBtn,increment,decrement;
     private ElegantNumberButton elegantNumberButton;
-
+   private  TextView quantitylabel;
 
         public CartItem(@NonNull View itemView) {
             super(itemView);
@@ -128,6 +136,9 @@ public class OrderShipping_Adapter extends RecyclerView.Adapter<RecyclerView.Vie
             deleteBtn=itemView.findViewById(R.id.btn_delete);
             elegantNumberButton=itemView.findViewById(R.id.btn_Quntity);
             productQuantity=itemView.findViewById(R.id.txt_showQuantity);
+            quantitylabel=itemView.findViewById(R.id.quntity_label);
+            increment=itemView.findViewById(R.id.plusbtn);
+            decrement=itemView.findViewById(R.id.minusbtn);
         }
     }
 

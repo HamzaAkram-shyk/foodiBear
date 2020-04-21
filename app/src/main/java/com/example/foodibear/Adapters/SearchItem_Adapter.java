@@ -1,6 +1,8 @@
 package com.example.foodibear.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.sax.StartElementListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import android.widget.Filterable;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.foodibear.Activities.ProductDetailed;
 import com.example.foodibear.Model.Product;
 import com.example.foodibear.R;
 
@@ -49,7 +52,10 @@ public class SearchItem_Adapter extends RecyclerView.Adapter<SearchItem_Adapter.
        holder.itemView.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Toast.makeText(context,productList.get(position).getProductId(),Toast.LENGTH_SHORT).show();
+               Intent intent=new Intent(context, ProductDetailed.class);
+               intent.putExtra("product",productList.get(position));
+               context.startActivity(intent);
+
            }
        });
     }

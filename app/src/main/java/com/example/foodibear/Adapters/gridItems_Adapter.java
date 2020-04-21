@@ -59,6 +59,7 @@ public class gridItems_Adapter extends RecyclerView.Adapter<gridItems_Adapter.Vi
         this.product=product;
         this.isCategory=isCategory;
 
+
     }
 
     @NonNull
@@ -66,7 +67,7 @@ public class gridItems_Adapter extends RecyclerView.Adapter<gridItems_Adapter.Vi
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
         View view= LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.items_grid_list,viewGroup,false);
+                .inflate(isCategory ?R.layout.items_grid_list:R.layout.product_item,viewGroup,false);
 
 
 

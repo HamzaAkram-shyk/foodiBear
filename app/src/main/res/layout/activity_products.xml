@@ -20,7 +20,7 @@
    >
     <com.google.android.material.appbar.CollapsingToolbarLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="170dp"
         app:layout_scrollFlags="scroll|exitUntilCollapsed"
         android:id="@+id/collapsing"
         app:contentScrim="@android:color/white"
@@ -41,13 +41,12 @@
                  <de.hdodenhof.circleimageview.CircleImageView
                      android:layout_width="120dp"
                      android:layout_height="100dp"
-                     app:layout_constraintStart_toStartOf="parent"
-                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
                      app:layout_constraintBottom_toBottomOf="parent"
                      android:src="@drawable/pizza_image"
-                     app:layout_constraintVertical_bias="0.7"
                      android:id="@+id/img_circle"
-                     android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                     android:layout_marginBottom="15dp"
                      />
 
                  <TextView
@@ -57,9 +56,9 @@
                      android:textSize="20sp"
                      android:id="@+id/product_name"
                      app:layout_constraintTop_toTopOf="@id/img_circle"
-                     app:layout_constraintStart_toEndOf="@id/img_circle"
-                     android:layout_marginStart="5dp"
-                     android:layout_marginTop="10dp"
+                     app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="20dp"
+                     android:layout_marginTop="20dp"
                      android:fontFamily="serif-monospace"
                      android:text="Pizza"
                      android:textStyle="bold"
@@ -95,13 +94,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="3dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
         android:elevation="5dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="3dp"
+        android:paddingEnd="3dp"
+        android:layout_marginTop="-10dp"
         android:id="@+id/recycler"
         android:layout_below="@id/appbar"
-
         />
 
 
@@ -122,6 +121,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="20dp"
